@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="flame">
+    <div class="flame-triangle"></div>
+    <h2 class="flame-header">障害発生アプリログイン画面</h2>
+    <div class="flame-container">
+        {{ message }}
+        <form action="/menu" method="post">
+            <p><input type="text" placeholder="UserID" name="mtg_username"></p>
+            <p><input type="password" placeholder="Password" name="mtg_password"></p>
+            <p><input type="submit" value="Log in"></p>
+        </form>
+    </div>
+</div>
+{% endblock %}

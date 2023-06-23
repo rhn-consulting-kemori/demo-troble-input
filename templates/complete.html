@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="flame">
+    <div class="flame-triangle"></div>
+    <h2 class="flame-header">障害登録完了</h2>
+    <div class="flame-container">
+        <div align="center">{{message}}</div><br>
+        <table>
+            <tr><td>障害ID</td><td>{{ form_dict["err_id"] }}</td></tr>
+            <tr><td>発生日時</td><td>{{ form_dict["timestamp"] }}</td></tr>
+            <tr><td>システム名</td><td>{{ form_dict["system_name"] }}</td></tr>
+            <tr><td>エラー対象</td><td>{{ form_dict["err_target"] }}</td></tr>
+            <tr><td>エラーコード</td><td>{{ form_dict["err_code"] }}</td></tr>
+            <tr><td>内容</td><td>{{ form_dict["context"] }}</td></tr>
+            <tr><td>備考</td><td>{{ form_dict["memo"] }}</td></tr>
+        </table>
+        <p><input type="button" value="さらに追加" onclick="location.href = '/putdata';"></p>
+        <p><input type="button" value="Menu" onclick="location.href = '/menu';"></p>
+        <p><input type="button" value="Logout" onclick="location.href = '/logout';"></p>
+    </div>
+</div>
+{% endblock %}

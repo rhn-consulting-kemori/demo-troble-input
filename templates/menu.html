@@ -1,0 +1,12 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="flame">
+    <div class="flame-triangle"></div>
+    <h2 class="flame-header">メニュー画面</h2>
+    <div class="flame-container">
+        <p><input type="button" value="障害一覧" onclick="location.href = '/eventlist';"></p>
+        <p><input type="button" value="障害登録" onclick="location.href = '/putdata';"></p>
+        <p><input type="button" value="Logout" onclick="location.href = '/logout';"></p>
+    </div>
+</div>
+{% endblock %}

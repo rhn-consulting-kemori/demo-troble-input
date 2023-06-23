@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="flame">
+    <div class="flame-triangle"></div>
+    <h2 class="flame-header">障害登録</h2>
+    <div class="flame-container">
+        {{message}}
+        <form action="/post" method="post">
+            <h3 class="flame-subheader">データ入力</h2>
+            <table>
+                <tr><td><input type="text" name="system_name" id="system_name" placeholder="システム名"></td></tr>
+                <tr><td><input type="text" name="err_target" id="err_target" placeholder="エラー対象"></td></tr>
+                <tr><td><input type="text" name="err_code" id="err_code" placeholder="エラーコード"></td></tr>
+                <tr><td><textarea name="context" id="context" placeholder="内容"></textarea ></td></tr>
+                <tr><td><textarea name="memo" id="memo" placeholder="備考"></textarea ></td></tr>
+            </table>
+            <p><input type="submit" value="登録する"></p>
+        </form>
+        <p><input type="button" value="Menu" onclick="location.href = '/menu';"></p>
+        <p><input type="button" value="Logout" onclick="location.href = '/logout';"></p>
+    </div>
+</div>
+{% endblock %}

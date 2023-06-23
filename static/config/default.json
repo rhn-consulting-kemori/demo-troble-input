@@ -1,0 +1,6 @@
+{
+    "logfile_name" : "log/ERR.log",
+    "system_name" : "Test System", 
+    "err_target" : "Online Web Process", 
+    "err_code" : "ED001234"
+}
