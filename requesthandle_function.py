@@ -5,8 +5,8 @@ import datetime, json
 def requestFormHandler(form_obj, json_data):
     form_dict = {}
     
-    # now datetime
-    now = datetime.datetime.now()
+    # now datetime timezone + 9
+    now = datetime.datetime.now() + datetime.timedelta(hours=9)
 
     # err_id
     form_dict.setdefault("err_id", "err-" + str(int(now.timestamp())))
